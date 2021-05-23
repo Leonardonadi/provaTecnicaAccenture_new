@@ -1,0 +1,9 @@
+.idea/
+cucumber_selenium_framework.iml
+target/HtmlReports/HtmlReports.html
+target/JsonReports/JsonReports.json
+target/JunitReports/XmlReports.xml
+
+
+# Project exclude paths
+/target/
