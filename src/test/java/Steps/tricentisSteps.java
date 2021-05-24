@@ -2,6 +2,7 @@ package Steps;
 
 
 import Pages.tricentisPage;
+import io.cucumber.java.After;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
@@ -48,6 +49,11 @@ public class tricentisSteps {
     public void o_sistema_exibe_sending_e_mail_success_na_tela() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
+    }
+
+    @After
+    public void fecharNavegador() {
+        page.browserClose();
     }
 
 }

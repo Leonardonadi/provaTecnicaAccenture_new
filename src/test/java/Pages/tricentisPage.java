@@ -29,7 +29,7 @@ public class tricentisPage {
     private By txt_annual_mileage = By.id("annualmileage");
     private By btn_next = By.id("nextenterinsurantdata");
 
-    //Formulario EnterInsurantDataData
+    //Formulario EnterInsurant Data
     private By txt_fist_name = By.id("firstname");
     private By txt_last_name = By.id("lastname");
     private By txt_date_of_birth = By.id("birthdate");
@@ -42,7 +42,7 @@ public class tricentisPage {
     private By cb_public_official = By.id("occupation");
     private By txt_website = By.id("website");
     private By btn_next2 = By.id("nextenterproductdata");
-
+    private By rd_male = By.xpath("//span[@class='ideal-radio']");
     //Formulario Enter Product Data
 
     private By txt_start_date = By.id("startdate");
@@ -111,7 +111,7 @@ public class tricentisPage {
         driver.findElement(txt_fist_name).sendKeys("Leonardo");
         driver.findElement(txt_last_name).sendKeys("Pereira");
         driver.findElement(txt_date_of_birth).sendKeys("04/22/1986");
-        driver.findElement(rd_gender).click();
+        driver.findElement(rd_male).click();
         driver.findElement(txt_street_address).sendKeys("Jardin Oceanico");
 
         WebElement element6 = driver.findElement(cb_contry);
@@ -137,6 +137,8 @@ public class tricentisPage {
     public void devePreencherFormularioEnterProductData() {
 
         driver.findElement(txt_start_date).sendKeys("04/22/2026");
+
+
 
         WebElement element9 = driver.findElement(cb_insurancesum);
         Select combo9 = new Select(element9);
@@ -165,6 +167,9 @@ public class tricentisPage {
        driver.findElement(btn_nextsendquote).click();
 
    }
-
+    public void browserClose() {
+        driver.close();
+        driver.quit();
+    }
 
 }
